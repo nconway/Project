@@ -32,17 +32,16 @@ h1 {
   width: 600px;
   margin: 0 auto;
   display: none;
-  border-right: 5px solid red;
 }
 
 .board .player {
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
   float: left;
 }
 
-.player-1 { background-color: red; }
-.player-2 { background-color: green; }
+.player-1 { background-color: black; }
+
 
 .bot img {
   height: 30px;
