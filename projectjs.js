@@ -1,4 +1,4 @@
-var player1Name;
+var input1;
 var accessMeLater;
 var search;
   
@@ -21,36 +21,28 @@ var flickrUrl = "https://www.flickr.com/services/rest/?method=flickr.photos.sear
 $(document).ready(function() {  
  
   $("a").click(function() {
-    search = $("input.player-1-search").val();
+    search = $("input.input1-search").val();
     var flickrUrl = "https://www.flickr.com/services/rest/?method=flickr.photos.search&format=json&api_key=4ef070a1a5e8d5fd19faf868213c8bd0&nojsoncallback=1&text="+search;
     console.log(flickrUrl); 
 
     $.get(flickrUrl, function(response) { 
       accessMeLater = response;
-      console.log(response);
-      //$("h2").eq(0).text(response.photos.photo[0].secret);
-      
+          
       for (var i=0; i<20; i++) {
           var photoUrl = buildFlickrUrl(response.photos.photo[i]);
-          //console.log(response.photos.photo[i].id);
           $("img").eq(i).attr('src', photoUrl);
-          //$("input.player-1-avatar").eq(i).val(photoUrl);
-          console.log(photoUrl);
       }
     
     });
     });  
 
   $("form").submit(function() {
-    player1Name = $(".player-1-search").val() || "Default: San Francisco"; // Again, use a default name.
-    $(".player-1-name").text("Here's what's happening in " + player1Name);
-
+    input1 = $(".input1-search").val() || "Default: San Francisco"; // Again, use a default name.
+    $(".location-name").text("Here's what's happening in " + input1);
 
     // Now, hide the setup screen and show the board!
     $(".setup-screen").hide();
     $(".board").show();
-
-    
 
     return false; // Make sure the form doesn't submit
   });
