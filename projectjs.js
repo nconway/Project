@@ -1,10 +1,4 @@
-var player1Position = 0;
-var player2Position = 0;
-var player1Color;
-var player2Color;
 var player1Name;
-var player2Name;
-var startTime;
 var accessMeLater;
 var search;
   
@@ -48,7 +42,7 @@ $(document).ready(function() {
     });  
 
   $("form").submit(function() {
-    player1Name = $(".player-1-name-input").val() || "Player 1"; // Again, use a default name.
+    player1Name = $(".player-1-search").val() || "Default: San Francisco"; // Again, use a default name.
     $(".player-1-name").text(player1Name);
 
     var url = $("input.player-1-avatar:checked").val();
