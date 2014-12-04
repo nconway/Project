@@ -40,11 +40,12 @@ h1 {
   float: left;
 }
 
-.player-1 { background-color: black; }
-
-
-.bot img {
-  height: 30px;
+.player-1-name {
+  margin-top: 10px;
+  font-size: 200%;
+  text-align: center;
+  height: 40px;
+  margin: 20px 0;
 }
 
 form {
@@ -64,9 +65,9 @@ form input[type='submit'] {
   margin-top: 50px;
   padding: 12px 8px;
   border-radius: 4px;
-  background-color: white;
-  color: red;
-  border: 2px solid red;
+  background-color: green;
+  color: white;
+  border: 2px solid green;
 }
 
 h2 {

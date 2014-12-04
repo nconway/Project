@@ -34,7 +34,7 @@ $(document).ready(function() {
           var photoUrl = buildFlickrUrl(response.photos.photo[i]);
           //console.log(response.photos.photo[i].id);
           $("img").eq(i).attr('src', photoUrl);
-          $("input.player-1-avatar").eq(i).val(photoUrl);
+          //$("input.player-1-avatar").eq(i).val(photoUrl);
           console.log(photoUrl);
       }
     
@@ -43,10 +43,8 @@ $(document).ready(function() {
 
   $("form").submit(function() {
     player1Name = $(".player-1-search").val() || "Default: San Francisco"; // Again, use a default name.
-    $(".player-1-name").text(player1Name);
+    $(".player-1-name").text("Here's what's happening in " + player1Name);
 
-    var url = $("input.player-1-avatar:checked").val();
-    $("img.player-1").attr('src', url);
 
     // Now, hide the setup screen and show the board!
     $(".setup-screen").hide();
