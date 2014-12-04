@@ -7,7 +7,7 @@ var player2Name;
 var startTime;
 var accessMeLater;
 var search;
-
+  
 function buildFlickrUrl(p) {
   var url = "https://farm";
   url += p.farm;
