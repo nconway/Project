@@ -20,7 +20,7 @@ var flickrUrl = "https://www.flickr.com/services/rest/?method=flickr.photos.sear
     
 $(document).ready(function() {  
  
-  $("a").click(function() {
+  $("form").submit(function() {
     search = $("input.input1-search").val();
     var flickrUrl = "https://www.flickr.com/services/rest/?method=flickr.photos.search&format=json&api_key=4ef070a1a5e8d5fd19faf868213c8bd0&nojsoncallback=1&text="+search;
     console.log(flickrUrl); 
