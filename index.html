@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Your description goes here">
+    	<meta name="keywords" content="one, two, three">
+	
+		<title>Racer</title>
+		
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/styles.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="amazing_race.js"></script>
+	</head>
+	<body>
+    <h1></h1>
+    <div class='setup-screen'>
+      <form>
+        <h2> Player 1 </h2>
+
+        <input type='text' placeholder="Enter player 1's name" class='player-1-name-input' autofocus>
+        <input type='text' placeholder="Search for Avatar" class ="player-1-search">
+        <a href="javascrip:void(0);">Search change here</a>
+        
+        <div class = "clearfix">
+          <label>
+            <img src = "http://images2.fanpop.com/image/photos/9700000/Sad-Puppy-puppies-9726248-1600-1200.jpg">
+            <input type = 'radio' name = 'player1Avatar' class = 'player-1-avatar' value = 'http://images2.fanpop.com/image/photos/9700000/Sad-Puppy-puppies-9726248-1600-1200.jpg' />
+          </label>
+          <label>
+            <img src = "http://cdn.cutestpaw.com/wp-content/uploads/2011/11/cute-puppy-l1.jpg">
+            <input type = 'radio' name = 'player1Avatar' class = 'player-1-avatar' value = 'http://cdn.cutestpaw.com/wp-content/uploads/2011/11/cute-puppy-l1.jpg' />
+          </label>
+          <label>
+            <img src = "http://people.ucsc.edu/~ddiep1/puppy.jpg">
+            <input type = 'radio' name = 'player1Avatar' class = 'player-1-avatar' value = 'http://people.ucsc.edu/~ddiep1/puppy.jpg' />
+           </label> 
+           <label>
+            <img src = "http://people.ucsc.edu/~ddiep1/puppy.jpg">
+            <input type = 'radio' name = 'player1Avatar' class = 'player-1-avatar' value = 'http://people.ucsc.edu/~ddiep1/puppy.jpg' />
+           </label> 
+           <label>
+            <img src = "http://people.ucsc.edu/~ddiep1/puppy.jpg">
+            <input type = 'radio' name = 'player1Avatar' class = 'player-1-avatar' value = 'http://people.ucsc.edu/~ddiep1/puppy.jpg' />
+           </label> 
+        </div>
+
+        <h2> Player 2 Edit on a branch</h2>
+
+        <input type='text' placeholder="Enter player 2's name" class='player-2-name-input'>
+
+        <div class = "clearfix">
+          <label>
+            <img src = "http://www.austintexas.gov/sites/default/files/files/Animal_Services/cute-kitten-playing.jpg">
+            <input type = 'radio' name = 'player2Avatar' class = 'player-2-avatar' value = 'http://www.austintexas.gov/sites/default/files/files/Animal_Services/cute-kitten-playing.jpg' />
+          </label>
+          <label>
+            <img src = "http://critterbabies.com/wp-content/gallery/kittens/cats-animals-kittens-background-us.jpg">
+            <input type = 'radio' name = 'player2Avatar' class = 'player-2-avatar' value = 'http://critterbabies.com/wp-content/gallery/kittens/cats-animals-kittens-background-us.jpg' />
+          </label>
+          <label>
+            <img src = "http://critterbabies.com/wp-content/gallery/kittens/803864926_1375572583.jpg">
+            <input type = 'radio' name = 'player2Avatar' class = 'player-2-avatar' value = 'http://critterbabies.com/wp-content/gallery/kittens/803864926_1375572583.jpg' />
+           </label> 
+           <label>
+            <img src = "https://farm4.staticflickr.com/3932/15642377292_b918922df4.jpg">
+            <input type = 'radio' name = 'player2Avatar' class = 'player-2-avatar' value = 'https://farm4.staticflickr.com/3932/15642377292_b918922df4.jpg' />
+           </label> 
+           <label>
+            <img src = "https://farm3.staticflickr.com/2946/15380961726_f436a2b89c.jpg">
+            <input type = 'radio' name = 'player2Avatar' class = 'player-2-avatar' value = 'https://farm3.staticflickr.com/2946/15380961726_f436a2b89c.jpg' />
+           </label> 
+        </div>
+
+        <input type='submit' value='GO!'>
+      </form>
+    </div>
+    <div class='board'>
+      <div class='clearfix'>
+        <p class='player-1-name'></p>
+        <img class='player player-1'>
+      </div>
+      <br>
+      <div class='clearfix'>
+        <p class='player-2-name'></p>
+        <img class='player player-2'>
+      </div>
+    </div>
+	</body>
+</html>
