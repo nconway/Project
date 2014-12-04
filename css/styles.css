@@ -47,12 +47,6 @@ h1 {
   height: 30px;
 }
 
-.player.red { background: red; }
-.player.green { background: green; }
-.player.blue { background: blue; }
-.player.purple { background: purple; }
-.player.orange { background: orange; }
-
 form {
   width: 400px;
   margin: 0 auto;
@@ -78,19 +72,6 @@ form input[type='submit'] {
 h2 {
   margin-top: 50px;
 }
-
-.color-choice {
-  float: left;
-  width: 20%;
-  padding: 20px 0;
-  text-align: center;
-}
-
-.color-choice.color-green{ background-color: green; }
-.color-choice.color-red{ background-color: red; }
-.color-choice.color-blue{ background-color: blue; }
-.color-choice.color-orange{ background-color: orange; }
-.color-choice.color-purple{ background-color: purple; }
 
 
 iframe { 

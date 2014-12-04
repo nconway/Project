@@ -30,7 +30,7 @@ $(document).ready(function() {
       console.log(response);
       //$("h2").eq(0).text(response.photos.photo[0].secret);
       
-      for (var i=0; i<5; i++) {
+      for (var i=0; i<20; i++) {
           var photoUrl = buildFlickrUrl(response.photos.photo[i]);
           //console.log(response.photos.photo[i].id);
           $("img").eq(i).attr('src', photoUrl);
