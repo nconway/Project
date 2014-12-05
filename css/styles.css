@@ -60,14 +60,26 @@ form input[type='text'] {
   border-radius: 4px;
 }
 
-form input[type='submit'] {
-  width: 100%;
+input[type='submit'] {
+  width: 400px;
   margin-top: 50px;
   padding: 12px 8px;
   border-radius: 4px;
   background-color: green;
   color: white;
   border: 2px solid green;
+
+}
+
+input:last-child[type='submit'] {
+  width: 400px;
+  margin-top: 50px;
+  padding: 12px 8px;
+  border-radius: 4px;
+  background-color: blue;
+  color: white;
+  border: 2px solid blue;
+
 }
 
 h2 {

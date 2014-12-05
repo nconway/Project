@@ -36,6 +36,25 @@ $(document).ready(function() {
     });
     });  
 
+    $("form.second").submit(function() {
+    var flickrUrl = "https://www.flickr.com/services/rest/?method=flickr.photos.search&format=json&api_key=4ef070a1a5e8d5fd19faf868213c8bd0&nojsoncallback=1&text="+search;
+    console.log(flickrUrl); 
+
+    $.get(flickrUrl, function(response) { 
+      accessMeLater = response;
+          
+      for (var i=0; i<20; i++) {
+          var photoUrl = buildFlickrUrl(response.photos.photo[i]);
+          $("img").eq(i).attr('src', photoUrl);
+      }
+    
+    });
+    });
+
+  $("#btnSubmit").click(function(){
+        location.reload();
+    });    
+  
   $("form").submit(function() {
     input1 = $(".input1-search").val() || "Default: San Francisco"; // Again, use a default name.
     $(".location-name").text("Here's what's happening in " + input1);
