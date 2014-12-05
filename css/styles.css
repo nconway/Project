@@ -15,7 +15,6 @@
      height: 0;
 }
 
-
 body {
   color: #333;
   font-family: Helvetica, Arial, sans-serif;
@@ -26,6 +25,16 @@ h1 {
   text-align: center;
   height: 40px;
   margin: 20px 0;
+}
+
+#plane{
+  position:relative; 
+  top:0px; 
+  background-color: yellow;
+  background-repeat: no-repeat; 
+  display:block;
+  height:110px; 
+  width:100%;
 }
 
 .board {
@@ -106,6 +115,7 @@ form label {
 
 img {
   width: 30%;
+  margin-right: 5px;
 }
 
 form input[type='text']:nth-child(3) {
