@@ -49,13 +49,14 @@ $(document).ready(function() {
           moveleft();
         }, 9000);
 
+
   $("#btnSubmit").click(function(){
         location.reload();
     });    
   
   $("form").submit(function() {
     input1 = $(".input1-search").val() || "Default: San Francisco"; // Again, use a default name.
-    //$(".location-name").text("Here's pictures from flickr of " + input1);
+    $(".location-name").text("Pictures of " + input1);
 
     // Now, hide the setup screen and show the board!
     $(".setup-screen").hide();
