@@ -2,6 +2,8 @@ var input1;
 var accessMeLater;
 var search;
 var instaLater;
+var flickrUrl = "https://www.flickr.com/services/rest/?method=flickr.photos.search&format=json&api_key=4ef070a1a5e8d5fd19faf868213c8bd0&nojsoncallback=1&text=";
+var instaUrl ="https://api.instagram.com/v1/tags/coffee/media/recent?access_token=9266791.ab103e5.dc9701b2213c45329ae7d044ef273db9"  
   
 function buildFlickrUrl(p) {
   var url = "https://farm";
@@ -13,18 +15,18 @@ function buildFlickrUrl(p) {
   url += "_";
   url += p.secret;
   url += ".jpg"
-
-  //var url = "https://farm"+p.farm+".staticflickr.com/"+p.server+"/"+p.id+"_"+p.secret+".jpg";
+ //var url = "https://farm"+p.farm+".staticflickr.com/"+p.server+"/"+p.id+"_"+p.secret+".jpg";
   return url;
 }
-var flickrUrl = "https://www.flickr.com/services/rest/?method=flickr.photos.search&format=json&api_key=4ef070a1a5e8d5fd19faf868213c8bd0&nojsoncallback=1&text=";
-//var instaUrl = "https://api.instagram.com/v1/media/popular?client_id=c1fc8879f92a41fb962d9bbe6e716206"
-var instaUrl ="https://api.instagram.com/v1/tags/coffee/media/recent?access_token=9266791.ab103e5.dc9701b2213c45329ae7d044ef273db9"  
+
 
 $(document).ready(function() {  
  
   $("form").submit(function() {
     
+    search = $("input.input1-search").val();
+    var instaUrl ="https://api.instagram.com/v1/tags/"+search+"/media/recent?access_token=9266791.ab103e5.dc9701b2213c45329ae7d044ef273db9"  
+
     $.ajax({
         type: "GET",
         dataType: "jsonp",
@@ -40,7 +42,6 @@ $(document).ready(function() {
     } 
     }); 
 
-    search = $("input.input1-search").val();
     var flickrUrl = "https://www.flickr.com/services/rest/?method=flickr.photos.search&format=json&api_key=4ef070a1a5e8d5fd19faf868213c8bd0&nojsoncallback=1&text="+search;
     
     $.get(flickrUrl, function(response) { 
