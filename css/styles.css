@@ -27,6 +27,13 @@ h1 {
   margin: 20px 0;
 }
 
+#body {
+  width: 1349px;
+  height: 1200px;
+  display: block;
+  color: white;
+}
+
 #plane{
   position:relative; 
   top:0px; 
