@@ -18,28 +18,39 @@ function buildFlickrUrl(p) {
   return url;
 }
 var flickrUrl = "https://www.flickr.com/services/rest/?method=flickr.photos.search&format=json&api_key=4ef070a1a5e8d5fd19faf868213c8bd0&nojsoncallback=1&text=";
-var instaUrl = "https://api.instagram.com/v1/media/popular?client_id=c1fc8879f92a41fb962d9bbe6e716206"
-    
+//var instaUrl = "https://api.instagram.com/v1/media/popular?client_id=c1fc8879f92a41fb962d9bbe6e716206"
+var instaUrl ="https://api.instagram.com/v1/tags/coffee/media/recent?access_token=9266791.ab103e5.dc9701b2213c45329ae7d044ef273db9"  
+
 $(document).ready(function() {  
  
   $("form").submit(function() {
     
-    $.get(instaUrl, function(instaResponse) { 
-      instaLater = instaResponse;
-      console.log(instaLater);
+    $.ajax({
+        type: "GET",
+        dataType: "jsonp",
+        url: instaUrl, 
+        success: function(instaResponse) {
+        console.log(instaResponse);
+        var photoInsta = instaResponse.data[0].images.standard_rersolution.url;
+        console.log(photoInsta);
+       // for (var i=0; i<20; i++) {
+       //  var photoInsta = instaResponse.data[i].images.standard_resultion.url);
+       //  $("img.insta").eq(i).attr('src', photoInsta);
+       }
+
+    //});
     });
 
     search = $("input.input1-search").val();
     var flickrUrl = "https://www.flickr.com/services/rest/?method=flickr.photos.search&format=json&api_key=4ef070a1a5e8d5fd19faf868213c8bd0&nojsoncallback=1&text="+search;
-    console.log(flickrUrl); 
-
+    
     $.get(flickrUrl, function(response) { 
       accessMeLater = response;
           
       for (var i=0; i<20; i++) {
           var photoUrl = buildFlickrUrl(response.photos.photo[i]);
           $("img.player").eq(i).attr('src', photoUrl);
-          $("img.insta").eq(i).attr('src', photoUrl);
+          //$("img.insta").eq(i).attr('src', photoUrl);
       }
     
     });
