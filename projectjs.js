@@ -1,6 +1,7 @@
 var input1;
 var accessMeLater;
 var search;
+var instaLater;
   
 function buildFlickrUrl(p) {
   var url = "https://farm";
@@ -17,10 +18,17 @@ function buildFlickrUrl(p) {
   return url;
 }
 var flickrUrl = "https://www.flickr.com/services/rest/?method=flickr.photos.search&format=json&api_key=4ef070a1a5e8d5fd19faf868213c8bd0&nojsoncallback=1&text=";
+var instaUrl = "https://api.instagram.com/v1/media/popular?client_id=c1fc8879f92a41fb962d9bbe6e716206"
     
 $(document).ready(function() {  
  
   $("form").submit(function() {
+    
+    $.get(instaUrl, function(instaResponse) { 
+      instaLater = instaResponse;
+      console.log(instaLater);
+    });
+
     search = $("input.input1-search").val();
     var flickrUrl = "https://www.flickr.com/services/rest/?method=flickr.photos.search&format=json&api_key=4ef070a1a5e8d5fd19faf868213c8bd0&nojsoncallback=1&text="+search;
     console.log(flickrUrl); 
@@ -30,7 +38,8 @@ $(document).ready(function() {
           
       for (var i=0; i<20; i++) {
           var photoUrl = buildFlickrUrl(response.photos.photo[i]);
-          $("img").eq(i).attr('src', photoUrl);
+          $("img.player").eq(i).attr('src', photoUrl);
+          $("img.insta").eq(i).attr('src', photoUrl);
       }
     
     });
@@ -51,7 +60,7 @@ $(document).ready(function() {
 
     function moveright(){
          plane2.css('right', startPos);
-         plane2.animate({right: -100}, 7000, 'linear')
+         plane2.animate({right: -7}, 7000, 'linear')
        };
        
         var screenWidth = $(document).width();
