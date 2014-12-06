@@ -19,7 +19,6 @@ function buildFlickrUrl(p) {
   return url;
 }
 
-
 $(document).ready(function() {  
  
   $("form").submit(function() {
@@ -35,11 +34,11 @@ $(document).ready(function() {
         console.log(instaResponse);
        // var photoInsta = instaResponse.data[0].images.standard_resolution.url;
         
-      for (var i=0; i<20; i++) {
-        var photoInsta = instaResponse.data[i].images.standard_resolution.url;
-        $("img.insta").eq(i).attr('src', photoInsta);
-      } 
-    } 
+        for (var i=0; i<20; i++) {
+          var photoInsta = instaResponse.data[i].images.standard_resolution.url;
+          $("img.insta").eq(i).attr('src', photoInsta);
+          } 
+        } 
     }); 
 
     var flickrUrl = "https://www.flickr.com/services/rest/?method=flickr.photos.search&format=json&api_key=4ef070a1a5e8d5fd19faf868213c8bd0&nojsoncallback=1&text="+search;
@@ -48,43 +47,38 @@ $(document).ready(function() {
       accessMeLater = response;
           
       for (var i=0; i<20; i++) {
-          var photoUrl = buildFlickrUrl(response.photos.photo[i]);
-          $("img.player").eq(i).attr('src', photoUrl);
-          //$("img.insta").eq(i).attr('src', photoUrl);
-      }
-    });
+        var photoUrl = buildFlickrUrl(response.photos.photo[i]);
+        $("img.player").eq(i).attr('src', photoUrl);
+        }
+      });
     });  
 
     function moveleft(){
-         plane.css('left', startPos);
-         plane.animate({left: 10}, 7000, 'linear')
-       };
+      plane.css('left', startPos);
+      plane.animate({left: 10}, 7000, 'linear')
+    };
        
-        var screenWidth = $(document).width();
-        var startPos = screenWidth;
-        var plane = $('#plane')
-        moveleft();
-        //setInterval(function() {
-        //  moveleft();
-        //}, 9000);
+    var screenWidth = $(document).width();
+    var startPos = screenWidth;
+    var plane = $('#plane')
+    moveleft();
+    //setInterval(function() {
+    //  moveleft();
+    //}, 9000);
 
     function moveright(){
-         plane2.css('right', startPos);
-         plane2.animate({right: -7}, 7000, 'linear')
-       };
+      plane2.css('right', startPos);
+      plane2.animate({right: -7}, 7000, 'linear')
+    };
        
-        var screenWidth = $(document).width();
-        var startPos = screenWidth;
-        var plane2 = $('#plane2')
-        moveright();
-        //setInterval(function() {
-        //  moveleft();
-        //}, 9000);
-
+    var screenWidth = $(document).width();
+    var startPos = screenWidth;
+    var plane2 = $('#plane2')
+    moveright();
 
   $("#btnSubmit").click(function(){
-        location.reload();
-    });    
+    location.reload();
+  });    
   
   $("form").submit(function() {
     input1 = $(".input1-search").val() || "Default: San Francisco"; // Again, use a default name.
@@ -96,6 +90,4 @@ $(document).ready(function() {
 
     return false; // Make sure the form doesn't submit
   });
-
-  
 });
