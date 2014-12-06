@@ -33,19 +33,21 @@ h1 {
   background-color: yellow;
   background-repeat: no-repeat; 
   display:block;
-  height:110px; 
+  height:150px; 
   width:100%;
+  margin-bottom: 20px;
 }
 
 .board {
-  width: 600px;
+  width: 100%;
   margin: 0 auto;
   display: none;
+  background-color: white;
 }
 
 .board .player {
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   float: left;
 }
 
@@ -54,11 +56,11 @@ h1 {
   font-size: 200%;
   text-align: center;
   height: 40px;
-  margin: 20px 0;
+  margin: 20px 0; 
 }
 
 form {
-  width: 400px;
+  width: 600px;
   margin: 0 auto;
 }
 
@@ -70,24 +72,13 @@ form input[type='text'] {
 }
 
 input[type='submit'] {
-  width: 400px;
-  margin-top: 50px;
+  width: 600px;
+  margin-top: 20px;
   padding: 12px 8px;
   border-radius: 4px;
   background-color: green;
   color: white;
   border: 2px solid green;
-
-}
-
-input:last-child[type='submit'] {
-  width: 400px;
-  margin-top: 50px;
-  padding: 12px 8px;
-  border-radius: 4px;
-  background-color: blue;
-  color: white;
-  border: 2px solid blue;
 
 }
 
@@ -116,6 +107,7 @@ form label {
 img {
   width: 30%;
   margin-right: 5px;
+  margin-left: 5px;
 }
 
 form input[type='text']:nth-child(3) {

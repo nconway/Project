@@ -55,7 +55,7 @@ $(document).ready(function() {
   
   $("form").submit(function() {
     input1 = $(".input1-search").val() || "Default: San Francisco"; // Again, use a default name.
-    $(".location-name").text("Here's what's happening in " + input1);
+    //$(".location-name").text("Here's pictures from flickr of " + input1);
 
     // Now, hide the setup screen and show the board!
     $(".setup-screen").hide();

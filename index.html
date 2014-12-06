@@ -16,20 +16,19 @@
 		<script src="projectjs.js"></script>
 	</head>
 	<body>
-    <h1></h1>
     <div class='setup-screen'>
       <form>
-        <h2> Enter a location </h2>
+        <h2> What do you want to see pictures of? </h2>
 
         
-        <input type='text' placeholder="Enter a Location" class ="input1-search">
+        <input type='text' placeholder="Enter a search item" class ="input1-search">
         
         <input type='submit' value='Find Images'>
       </form>
     </div> <!--setup screen end-->
     <div class='board'>
       <div class='clearfix'>
-        <p class='location-name'></p>
+        <h2> Pictures from Flickr</h2>
         <div id = "plane">
           <img class='player'>
           <img class='player'>
@@ -39,13 +38,18 @@
           <img class='player'>
           <img class='player'>
           <img class='player'>
-          <img class='player'>
-          <img class='player'>
         </div> <!-- plane end -->  
+        <div id = "plane2">
+          <img class='player'>
+          <img class='player'>
+          <img class='player'>
+          <img class='player'>
+          <img class='player'>
+          <img class='player'>
+          <img class='player'>
+          <img class='player'>
+        </div> <!-- plane2 end -->  
         <form class = 'second'>
-          <input type='submit' value='Load More'>
-   
-        <!-- Begin Button -->   
           <input id = "btnSubmit" type="submit" value="New Selection"/>
         </form>
       </div> <!--clearfix end-->
