@@ -31,15 +31,14 @@ $(document).ready(function() {
         url: instaUrl, 
         success: function(instaResponse) {
         console.log(instaResponse);
-        var photoInsta = instaResponse.data[0].images.standard_rersolution.url;
-        console.log(photoInsta);
-       // for (var i=0; i<20; i++) {
-       //  var photoInsta = instaResponse.data[i].images.standard_resultion.url);
-       //  $("img.insta").eq(i).attr('src', photoInsta);
-       }
-
-    //});
-    });
+       // var photoInsta = instaResponse.data[0].images.standard_resolution.url;
+        
+      for (var i=0; i<20; i++) {
+        var photoInsta = instaResponse.data[i].images.standard_resolution.url;
+        $("img.insta").eq(i).attr('src', photoInsta);
+      } 
+    } 
+    }); 
 
     search = $("input.input1-search").val();
     var flickrUrl = "https://www.flickr.com/services/rest/?method=flickr.photos.search&format=json&api_key=4ef070a1a5e8d5fd19faf868213c8bd0&nojsoncallback=1&text="+search;
@@ -52,7 +51,6 @@ $(document).ready(function() {
           $("img.player").eq(i).attr('src', photoUrl);
           //$("img.insta").eq(i).attr('src', photoUrl);
       }
-    
     });
     });  
 
