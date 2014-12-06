@@ -38,16 +38,29 @@ $(document).ready(function() {
 
     function moveleft(){
          plane.css('left', startPos);
-         plane.animate({left: -200}, 7000, 'linear')
+         plane.animate({left: 10}, 7000, 'linear')
        };
        
         var screenWidth = $(document).width();
         var startPos = screenWidth;
         var plane = $('#plane')
         moveleft();
-        setInterval(function() {
-          moveleft();
-        }, 9000);
+        //setInterval(function() {
+        //  moveleft();
+        //}, 9000);
+
+    function moveright(){
+         plane2.css('right', startPos);
+         plane2.animate({right: -100}, 7000, 'linear')
+       };
+       
+        var screenWidth = $(document).width();
+        var startPos = screenWidth;
+        var plane2 = $('#plane2')
+        moveright();
+        //setInterval(function() {
+        //  moveleft();
+        //}, 9000);
 
 
   $("#btnSubmit").click(function(){
