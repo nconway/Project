@@ -140,3 +140,62 @@ form input[type='text']:nth-child(3) {
   padding: 4px 8px;
   border-radius: 4px;
 }
+
+/******************************************
+/* ADDITIONAL STYLES                   
+/*******************************************/
+@media only screen and (max-width: 768px) {
+/* define mobile specific styles come here */
+
+#plane{
+  position:relative; 
+  top:0px; 
+  background-color: white;
+  background-repeat: no-repeat; 
+  display:block;
+  height:600px; 
+  width:50%;
+  margin-bottom: 20px;
+}
+
+#plane2{
+  position:relative; 
+  top:0px; 
+  background-color: white;
+  background-repeat: no-repeat; 
+  display:block;
+  height:300px; 
+  width:50%;
+  margin-bottom: 20px;
+}
+
+form {
+  width: 50%;
+  margin: 10%;
+}
+
+form input[type='text'] {
+  width: 50%;
+  margin-bottom: 20px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+input[type='submit'] {
+  width: 50%;
+  margin-top: 20px;
+  padding: 12px 8px;
+  border-radius: 4px;
+  background-color: green;
+  color: white;
+  border: 2px solid green;
+}
+
+.board {
+  width: 50%;
+  height: auto;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: none;
+  background-color: white;
+}
